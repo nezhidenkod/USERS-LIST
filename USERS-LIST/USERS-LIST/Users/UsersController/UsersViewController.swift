@@ -8,13 +8,44 @@
 
 import UIKit
 
+// MARK: - PresenterInput
+protocol UsersPresenterInput {
+    func getData()
+}
+
+// MARK: - PresenterOutput
+protocol UsersPresenterOutput: class {
+    func reload(users: [User])
+    func showError(_ error: String)
+}
+
+// MARK: - ViewController
 class UsersViewController: BaseViewController {
     
     
-    // MARK: - Lifecycle
+    // MARK: Public Properties
+    var presenter: UsersPresenterInput!
+    
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.getData()
     }
+    
 }
 
+
+// MARK: - UsersPresenterOutput
+extension UsersViewController: UsersPresenterOutput {
+    
+    func reload(users: [User]) {
+        print("USERS \(users.count)")
+    }
+    
+    func showError(_ error: String) {
+        let alert = AlertManager()
+        alert.showAlertWith(message: error, onViewController: self)
+    }
+}

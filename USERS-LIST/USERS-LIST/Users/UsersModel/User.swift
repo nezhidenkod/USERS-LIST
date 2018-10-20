@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Users: Codable {
+struct UsersResults: Codable {
     let results: [User]
 }
 

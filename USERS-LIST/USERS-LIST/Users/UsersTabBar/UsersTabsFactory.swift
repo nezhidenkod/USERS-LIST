@@ -37,10 +37,12 @@ class UsersTabsFactory {
     // MARK: - Private funcs
     private func makeTab(_ viewController: ViewControllers) -> Navigation {
         
-        var tab = UIViewController()
+        let tab = UsersViewController.fromStoryboard(.Users)
         switch viewController {
-        case .users, .saved:
-            tab = UsersViewController.fromStoryboard(.Users)
+        case .users:
+            tab.presenter = UsersPresenter(output: tab)
+        case .saved:
+            tab.presenter = SavedUsersPresenter(output: tab)
         }
         
         let title = viewController.title

@@ -21,7 +21,7 @@ class NetworkUsersManager: NetworkManager {
         
         let path: UsersURLPaths = .getUsers(page: page)
         let request = NetworkRequest(path, log: false)
-        self.network.execute(request, parse: Users.self) { (result) in
+        self.network.execute(request, parse: UsersResults.self) { (result) in
             
             switch result {
             case .success(let users):
