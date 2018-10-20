@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UsersViewController.swift
 //  USERS-LIST
 //
 //  Created by Дмитрий on 20.10.2018.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class UsersViewController: BaseViewController {
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-
 }
 
