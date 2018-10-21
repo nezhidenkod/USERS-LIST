@@ -34,16 +34,15 @@ enum UsersURLPaths: URLPathProtocol {
     // MARK: HTTPMethod
     var method: NetworkMethod {
         switch self {
-        default:
-            return .get
+        default: return .get
         }
     }
     
     // MARK: Response Type
     var response: ResponseType {
         switch self {
-        default:
-            return .JSON
+        default: return .JSON
         }
     }
+    
 }

@@ -22,7 +22,7 @@ class SavedUsersPresenter: UsersPresenterInput {
     
     
     // MARK: - UsersPresenterInput
-    func getData() {
+    func getData(forPage page: Int) {
         
         // TODO: Get user from storage
     }

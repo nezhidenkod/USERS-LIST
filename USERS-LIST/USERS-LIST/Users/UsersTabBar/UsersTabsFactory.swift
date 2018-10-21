@@ -19,7 +19,7 @@ class UsersTabsFactory {
         var title: String {
             switch self {
             case .users, .saved:
-                return self.rawValue.uppercased()
+                return self.rawValue.capitalized
             }
         }
         
@@ -49,6 +49,7 @@ class UsersTabsFactory {
         let image = UIImage(named: viewController.image)
         let selectedImage = UIImage(named: "\(viewController.image)_active")
         
+        tab.title = title
         tab.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: selectedImage)
         return Navigation(rootViewController: tab)
     }

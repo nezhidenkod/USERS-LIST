@@ -22,10 +22,10 @@ class UsersPresenter: UsersPresenterInput {
     
     
     // MARK: - UsersPresenterInput
-    func getData() {
+    func getData(forPage page: Int) {
         
         let network = NetworkUsersManager()
-        network.getUsers(page: 1) { [weak self] (result) in
+        network.getUsers(page: page) { [weak self] (result) in
             
             guard let `self` = self else { return }
             switch result {

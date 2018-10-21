@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		15239D6D85C207CBC51273A8 /* Pods_USERS_LIST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D704E718151E55A14A5341 /* Pods_USERS_LIST.framework */; };
+		6833C5B2217CAA1C0088F466 /* SavedUsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833C5B1217CAA1C0088F466 /* SavedUsersPresenter.swift */; };
+		6833C5B4217CAA330088F466 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833C5B3217CAA330088F466 /* UsersViewController.swift */; };
+		6833C5B9217CACF10088F466 /* TableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833C5B8217CACF10088F466 /* TableControl.swift */; };
+		6833C5BD217CB9660088F466 /* UsersTableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833C5BC217CB9660088F466 /* UsersTableControl.swift */; };
+		6833C5BF217CE3940088F466 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6833C5BE217CE3940088F466 /* UsersPresenter.swift */; };
 		68C21E6D217B186500457698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C21E6C217B186500457698 /* AppDelegate.swift */; };
-		68C21E6F217B186500457698 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C21E6E217B186500457698 /* UsersViewController.swift */; };
 		68C21E72217B186500457698 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C21E70217B186500457698 /* Users.storyboard */; };
 		68C21E74217B186700457698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C21E73217B186700457698 /* Assets.xcassets */; };
 		68C21E77217B186700457698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C21E75217B186700457698 /* LaunchScreen.storyboard */; };
@@ -23,16 +27,21 @@
 		68C21E96217B3FFB00457698 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C21E95217B3FFB00457698 /* Constants.swift */; };
 		68C21E98217B424300457698 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C21E97217B424300457698 /* User.swift */; };
 		68CFEE32217BA8080016DD89 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE31217BA8080016DD89 /* AlertManager.swift */; };
-		68CFEE34217BABC60016DD89 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE33217BABC60016DD89 /* UsersPresenter.swift */; };
-		68CFEE36217BAD490016DD89 /* SavedUsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE35217BAD490016DD89 /* SavedUsersPresenter.swift */; };
+		68CFEE3A217BAFE20016DD89 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */; };
+		68CFEE3B217BAFE20016DD89 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */; };
+		68CFEE40217BB50E0016DD89 /* UsersCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D20767A4DEC44FF2F41DFCE /* Pods-USERS-LIST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USERS-LIST.release.xcconfig"; path = "Pods/Target Support Files/Pods-USERS-LIST/Pods-USERS-LIST.release.xcconfig"; sourceTree = "<group>"; };
 		41D704E718151E55A14A5341 /* Pods_USERS_LIST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USERS_LIST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6833C5B1217CAA1C0088F466 /* SavedUsersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedUsersPresenter.swift; sourceTree = "<group>"; };
+		6833C5B3217CAA330088F466 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		6833C5B8217CACF10088F466 /* TableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableControl.swift; sourceTree = "<group>"; };
+		6833C5BC217CB9660088F466 /* UsersTableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableControl.swift; sourceTree = "<group>"; };
+		6833C5BE217CE3940088F466 /* UsersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		68C21E69217B186500457698 /* USERS-LIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "USERS-LIST.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C21E6C217B186500457698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68C21E6E217B186500457698 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		68C21E71217B186500457698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
 		68C21E73217B186700457698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68C21E76217B186700457698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,8 +56,9 @@
 		68C21E95217B3FFB00457698 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		68C21E97217B424300457698 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		68CFEE31217BA8080016DD89 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
-		68CFEE33217BABC60016DD89 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
-		68CFEE35217BAD490016DD89 /* SavedUsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUsersPresenter.swift; sourceTree = "<group>"; };
+		68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
+		68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCellViewModel.swift; sourceTree = "<group>"; };
 		D6FEC009CD4568F66A7BD363 /* Pods-USERS-LIST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USERS-LIST.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USERS-LIST/Pods-USERS-LIST.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6833C5B5217CAA3D0088F466 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6833C5BE217CE3940088F466 /* UsersPresenter.swift */,
+				6833C5B1217CAA1C0088F466 /* SavedUsersPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		68C21E60217B186500457698 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				68C21E70217B186500457698 /* Users.storyboard */,
+				68CFEE37217BAFB90016DD89 /* UsersView */,
 				68C21E99217B424B00457698 /* UsersModel */,
 				68C21E92217B3BD800457698 /* UsersNetwork */,
 				68C21E8D217B26E300457698 /* UsersTabBar */,
@@ -123,6 +143,7 @@
 				68C21E85217B1C6300457698 /* Coordinator.swift */,
 				68C21E8F217B2D1500457698 /* NetworkHelper.swift */,
 				68CFEE31217BA8080016DD89 /* AlertManager.swift */,
+				6833C5B8217CACF10088F466 /* TableControl.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -180,11 +201,21 @@
 		68C21E9A217B46D000457698 /* UsersController */ = {
 			isa = PBXGroup;
 			children = (
-				68CFEE33217BABC60016DD89 /* UsersPresenter.swift */,
-				68CFEE35217BAD490016DD89 /* SavedUsersPresenter.swift */,
-				68C21E6E217B186500457698 /* UsersViewController.swift */,
+				6833C5B5217CAA3D0088F466 /* Presenter */,
+				6833C5BC217CB9660088F466 /* UsersTableControl.swift */,
+				6833C5B3217CAA330088F466 /* UsersViewController.swift */,
 			);
 			path = UsersController;
+			sourceTree = "<group>";
+		};
+		68CFEE37217BAFB90016DD89 /* UsersView */ = {
+			isa = PBXGroup;
+			children = (
+				68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */,
+				68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */,
+				68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */,
+			);
+			path = UsersView;
 			sourceTree = "<group>";
 		};
 		AE4DA31936BFFB46DE0E09AD /* Pods */ = {
@@ -265,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CFEE3B217BAFE20016DD89 /* UsersTableViewCell.xib in Resources */,
 				68C21E77217B186700457698 /* LaunchScreen.storyboard in Resources */,
 				68C21E74217B186700457698 /* Assets.xcassets in Resources */,
 				68C21E72217B186500457698 /* Users.storyboard in Resources */,
@@ -333,15 +365,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C21E89217B20AF00457698 /* BaseViewController.swift in Sources */,
-				68CFEE36217BAD490016DD89 /* SavedUsersPresenter.swift in Sources */,
-				68CFEE34217BABC60016DD89 /* UsersPresenter.swift in Sources */,
+				68CFEE40217BB50E0016DD89 /* UsersCellViewModel.swift in Sources */,
 				68C21E86217B1C6300457698 /* Coordinator.swift in Sources */,
+				68CFEE3A217BAFE20016DD89 /* UsersTableViewCell.swift in Sources */,
 				68C21E94217B3C1100457698 /* UsersURLPaths.swift in Sources */,
-				68C21E6F217B186500457698 /* UsersViewController.swift in Sources */,
+				6833C5BD217CB9660088F466 /* UsersTableControl.swift in Sources */,
+				6833C5B4217CAA330088F466 /* UsersViewController.swift in Sources */,
 				68C21E6D217B186500457698 /* AppDelegate.swift in Sources */,
 				68C21E96217B3FFB00457698 /* Constants.swift in Sources */,
 				68C21E84217B1ACB00457698 /* UsersTabBarController.swift in Sources */,
 				68C21E8C217B237F00457698 /* UsersTabsFactory.swift in Sources */,
+				6833C5BF217CE3940088F466 /* UsersPresenter.swift in Sources */,
+				6833C5B9217CACF10088F466 /* TableControl.swift in Sources */,
+				6833C5B2217CAA1C0088F466 /* SavedUsersPresenter.swift in Sources */,
 				68CFEE32217BA8080016DD89 /* AlertManager.swift in Sources */,
 				68C21E91217B2D1500457698 /* NetworkHelper.swift in Sources */,
 				68C21E90217B2D1500457698 /* NetworkUsersManager.swift in Sources */,
