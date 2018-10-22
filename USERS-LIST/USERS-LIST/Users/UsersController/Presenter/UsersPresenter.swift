@@ -12,6 +12,7 @@ class UsersPresenter: UsersPresenterInput {
     
     
     // MARK: - Private Properties
+    private var users: [User] = []
     private weak var output: UsersPresenterOutput!
     
     
@@ -22,19 +23,29 @@ class UsersPresenter: UsersPresenterInput {
     
     
     // MARK: - UsersPresenterInput
-    func getData(forPage page: Int) {
+    func getData(forPage page: Int?) {
+        guard let nextPage = page else { return }
         
         let network = NetworkUsersManager()
-        network.getUsers(page: page) { [weak self] (result) in
+        network.getUsers(page: nextPage) { [weak self] (result) in
             
             guard let `self` = self else { return }
             switch result {
             case .success(let users):
+                if self.users.isEmpty {
+                    self.users = users
+                } else {
+                    self.users.append(contentsOf: users)
+                }
                 self.output.reload(users: users)
             case .error(let error):
                 self.output.showError(error)
             }
         }
+    }
+    
+    func getUser(at index: Int) -> User {
+        return self.users[index]
     }
     
 }

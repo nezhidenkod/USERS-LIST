@@ -1,12 +1,27 @@
 PODS:
   - Alamofire (4.7.3)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - Realm (3.11.1):
+    - Realm/Headers (= 3.11.1)
+  - Realm/Headers (3.11.1)
+  - RealmSwift (3.11.1):
+    - Realm (= 3.11.1)
+  - TOCropViewController (2.3.6)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage (~> 3.4)
+  - RealmSwift
+  - TOCropViewController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
+  RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  TOCropViewController: 6d972f2c609372312648f96758e13a7f689efbc0
 
-PODFILE CHECKSUM: cc31c804922292f726b5988397679c242d487d7d
+PODFILE CHECKSUM: 634bddf695402b3b8fea93b4202d36f1717a6a39
 
 COCOAPODS: 1.4.0

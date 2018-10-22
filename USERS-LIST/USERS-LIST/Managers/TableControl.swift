@@ -84,7 +84,7 @@ class TablePagination {
         self.currentPage += 1
     }
     
-    func loadMore() {
+    fileprivate func loadMore() {
         
         guard load else { return }
         print("Fetching page \(currentPage)")
@@ -172,9 +172,11 @@ extension TableControl: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let dataSource = self.sections[indexPath.section].cellModels
-        if indexPath.row == dataSource.count - 1 {
-            pagination?.loadMore()
-        }
+        guard
+            let pagination = self.pagination,
+            indexPath.row == dataSource.count - 1 else { return }
+        
+        pagination.loadMore()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

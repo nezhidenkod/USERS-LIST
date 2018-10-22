@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class UsersTableViewCell: BaseTableViewCell {
     
@@ -17,10 +18,14 @@ class UsersTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     
     
+    // MARK: - Private properties
+    private let placeholderImage = UIImage(named: "placeholder")
+    
+    
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        userImageView.image = UIImage(named: "placeholder")
+        userImageView.image = placeholderImage
         userImageView.layer.cornerRadius = userImageView.frame.width / 2
     }
     
@@ -29,10 +34,12 @@ class UsersTableViewCell: BaseTableViewCell {
     override func configure(withModel model: Any) {
         guard let viewModel = model as? UsersCellViewModel else { return }
         
-        self.firstNameLabel.text = viewModel.fullname
-        self.phoneLabel.text = viewModel.phone
-        // TODO: Load from Alamofire
-        self.userImageView.image = UIImage(named: "placeholder")
+        firstNameLabel.text = viewModel.fullname
+        phoneLabel.text = viewModel.phone
+        if let url = URL(string: viewModel.imagePath) {
+            
+            userImageView.af_setImage(withURL: url, placeholderImage: placeholderImage)
+        }
     }
     
 }

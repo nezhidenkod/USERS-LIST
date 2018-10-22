@@ -10,7 +10,8 @@ import UIKit
 
 // MARK: - PresenterInput
 protocol UsersPresenterInput {
-    func getData(forPage page: Int)
+    func getData(forPage page: Int?)
+    func getUser(at index: Int) -> User
 }
 
 // MARK: - PresenterOutput
@@ -29,40 +30,43 @@ class UsersViewController: BaseViewController {
     
     
     // MARK: - Outlets
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: Public Properties
-    var presenter: UsersPresenterInput!
+    var configuration: UsersViewControllerConfig!
     
     
-    // MARK: Public Properties
-    private var tableControl: UsersTableControlProtocol!
-    private let pagination = TablePagination(itemsPerBatch: 10)
+    // MARK: Private Properties
+    private var presenter: UsersPresenterInput!
+    private var tableControl: UsersTableControl!
     
     
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        settingsTableView()
+        settings()
         presenter.getData(forPage: 1)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.getData(forPage: nil)
     }
     
     
     // MARK: Private funcs
-    private func settingsTableView() {
+    private func settings() {
         
-        let usersTableControl = UsersTableControl(tableView: tableView)
-        usersTableControl.pagination = pagination
-        usersTableControl.didSelectCell.delegate(to: self) { (self, indexPath) in
+        presenter = configuration.presenter
+        tableControl = configuration.tableControl
+        tableControl.didSelectCell.delegate(to: self) { (self, indexPath) in
             // TODO: Show Detail screen
         }
-        pagination.loadData.delegate(to: self) { (self, page) in
+        tableControl.pagination?.loadData.delegate(to: self) { (self, page) in
             self.presenter.getData(forPage: page)
         }
-        
-        tableControl = usersTableControl
     }
     
 }
@@ -74,7 +78,7 @@ extension UsersViewController: UsersPresenterOutput {
     func reload(users: [User]) {
         tableControl.setDataSource(users)
         tableView.reloadData()
-        pagination.update()
+        tableControl.pagination?.update()
     }
     
     func showError(_ error: String) {

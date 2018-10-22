@@ -7,10 +7,10 @@ target 'USERS-LIST' do
 
   # Pods for USERS-LIST
 
-pod 'Realm'
+pod 'RealmSwift'
 
 pod 'Alamofire'
-pod 'AlamofireImage'
+pod 'AlamofireImage', '~> 3.4'
 
 pod 'TOCropViewController'
 

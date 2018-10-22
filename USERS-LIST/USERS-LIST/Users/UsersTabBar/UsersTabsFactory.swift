@@ -40,9 +40,9 @@ class UsersTabsFactory {
         let tab = UsersViewController.fromStoryboard(.Users)
         switch viewController {
         case .users:
-            tab.presenter = UsersPresenter(output: tab)
+            tab.configuration = .users(tab)
         case .saved:
-            tab.presenter = SavedUsersPresenter(output: tab)
+            tab.configuration = .saved(tab)
         }
         
         let title = viewController.title

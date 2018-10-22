@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
 class SavedUsersPresenter: UsersPresenterInput {
     
     
     // MARK: - Private Properties
+    private let realm = try! Realm()
+    private var items: Results<RLMUser>!
     private weak var output: UsersPresenterOutput!
     
     
@@ -22,9 +25,15 @@ class SavedUsersPresenter: UsersPresenterInput {
     
     
     // MARK: - UsersPresenterInput
-    func getData(forPage page: Int) {
-        
-        // TODO: Get user from storage
+    func getData(forPage page: Int?) {
+        items = realm.objects(RLMUser.self)
+        let users: [User] = items.compactMap({ User(realmUser: $0) })
+        output.reload(users: users)
+    }
+    
+    func getUser(at index: Int) -> User {
+        let item = self.items[index]
+        return User(realmUser: item)
     }
     
 }
