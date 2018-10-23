@@ -34,6 +34,7 @@
 		68CFEE3A217BAFE20016DD89 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */; };
 		68CFEE3B217BAFE20016DD89 /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */; };
 		68CFEE40217BB50E0016DD89 /* UsersCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */; };
+		68D83C78217EE60D00B5537B /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D83C77217EE60D00B5537B /* EditUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCellViewModel.swift; sourceTree = "<group>"; };
+		68D83C77217EE60D00B5537B /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		D6FEC009CD4568F66A7BD363 /* Pods-USERS-LIST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USERS-LIST.debug.xcconfig"; path = "Pods/Target Support Files/Pods-USERS-LIST/Pods-USERS-LIST.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 				6833C5B5217CAA3D0088F466 /* Presenter */,
 				6851FEAE217E5C7E0088D7DD /* UsersViewControllerConfig.swift */,
 				6833C5B3217CAA330088F466 /* UsersViewController.swift */,
+				68D83C77217EE60D00B5537B /* EditUserViewController.swift */,
 			);
 			path = UsersController;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				6833C5B9217CACF10088F466 /* TableControl.swift in Sources */,
 				6851FEAF217E5C7E0088D7DD /* UsersViewControllerConfig.swift in Sources */,
 				6833C5B2217CAA1C0088F466 /* SavedUsersPresenter.swift in Sources */,
+				68D83C78217EE60D00B5537B /* EditUserViewController.swift in Sources */,
 				68CFEE32217BA8080016DD89 /* AlertManager.swift in Sources */,
 				68C21E91217B2D1500457698 /* NetworkHelper.swift in Sources */,
 				68C21E90217B2D1500457698 /* NetworkUsersManager.swift in Sources */,

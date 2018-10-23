@@ -62,7 +62,11 @@ class UsersViewController: BaseViewController {
         presenter = configuration.presenter
         tableControl = configuration.tableControl
         tableControl.didSelectCell.delegate(to: self) { (self, indexPath) in
-            // TODO: Show Detail screen
+            // TODO: Navigation
+            let user = self.presenter.getUser(at: indexPath.row)
+            let userDetail = EditUserViewController.fromStoryboard(.Users)
+            userDetail.user = user
+            self.navigationController?.pushViewController(userDetail, animated: true)
         }
         tableControl.pagination?.loadData.delegate(to: self) { (self, page) in
             self.presenter.getData(forPage: page)
