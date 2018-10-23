@@ -11,7 +11,8 @@ import UIKit
 // MARK: - PresenterInput
 protocol UsersPresenterInput {
     func getData(forPage page: Int?)
-    func getUser(at index: Int) -> User
+    func getUser(at index: Int) -> UserModel
+    func editUser(editCell: EditCell)
 }
 
 // MARK: - PresenterOutput
@@ -61,16 +62,30 @@ class UsersViewController: BaseViewController {
         
         presenter = configuration.presenter
         tableControl = configuration.tableControl
+        tableControl.didEditingCell.delegate(to: self) { (self, editCell) in
+            self.presenter.editUser(editCell: editCell)
+        }
         tableControl.didSelectCell.delegate(to: self) { (self, indexPath) in
-            // TODO: Navigation
             let user = self.presenter.getUser(at: indexPath.row)
-            let userDetail = EditUserViewController.fromStoryboard(.Users)
-            userDetail.user = user
-            self.navigationController?.pushViewController(userDetail, animated: true)
+            self.nextViewController(user: user)
         }
         tableControl.pagination?.loadData.delegate(to: self) { (self, page) in
             self.presenter.getData(forPage: page)
         }
+    }
+    
+    private func nextViewController(user: UserModel) {
+        
+        // TODO: Move to Coordinator
+        let userDetail = EditUserViewController.fromStoryboard(.Users)
+        
+        switch configuration! {
+        case .users:
+            userDetail.configuration = .new(user)
+        case .saved:
+            userDetail.configuration = .saved(user)
+        }
+        self.navigationController?.pushViewController(userDetail, animated: true)
     }
     
 }
@@ -80,6 +95,7 @@ class UsersViewController: BaseViewController {
 extension UsersViewController: UsersPresenterOutput {
     
     func reload(users: [User]) {
+        
         tableControl.setDataSource(users)
         tableView.reloadData()
         tableControl.pagination?.update()

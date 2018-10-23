@@ -31,9 +31,17 @@ class SavedUsersPresenter: UsersPresenterInput {
         output.reload(users: users)
     }
     
-    func getUser(at index: Int) -> User {
-        let item = self.items[index]
-        return User(realmUser: item)
+    func getUser(at index: Int) -> UserModel {
+        return self.items[index]
     }
     
+    func editUser(editCell: EditCell) {
+        let index = editCell.indexPath.row
+        let object = items[index]
+        
+        try! self.realm.write {
+            self.realm.delete(object)
+        }
+        getData(forPage: nil)
+    }
 }

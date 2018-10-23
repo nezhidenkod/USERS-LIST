@@ -11,12 +11,19 @@ import UIKit
 class EditUserViewController: BaseViewController {
     
     
+    // MARK: Configuration
+    enum EditUserConfiguration {
+        case new(UserModel)
+        case saved(UserModel)
+    }
+    
+    
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: Public Properties
-    var user: User!
+    var configuration: EditUserConfiguration!
     
     
     // MARK: Private Properties
@@ -32,11 +39,18 @@ class EditUserViewController: BaseViewController {
     
     // MARK: Action funcs
     @objc private func save() {
-        // TODO: Save storage
+        
         let realm = RealmManager()
-        let object = RLMUser(user: user)
-        realm.save(object: object)
-        // TODO: Navigation
+        switch configuration! {
+        case .new(let user):
+            let object = RLMUser(user: user)
+            realm.save(object: object)
+        case .saved(let user):
+            let object = realm.getObject(key: user.phone)!
+            realm.edit(object: object)
+        }
+        
+        // TODO: Coordinator
         tabBarController?.selectedIndex = 1
         navigationController?.popViewController(animated: false)
     }

@@ -44,8 +44,11 @@ class UsersPresenter: UsersPresenterInput {
         }
     }
     
-    func getUser(at index: Int) -> User {
+    func getUser(at index: Int) -> UserModel {
         return self.users[index]
     }
     
+    func editUser(editCell: EditCell) {
+        
+    }
 }

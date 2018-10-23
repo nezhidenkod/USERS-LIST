@@ -23,8 +23,23 @@ struct User: Codable {
         self.email = realmUser.email
         self.phone = realmUser.phone
         self.picture = Picture(thumbnail: realmUser.thumbnail)
-        
     }
+}
+
+extension User: UserModel {
+    
+    var first: String {
+        return name.first
+    }
+    
+    var last: String {
+        return name.last
+    }
+    
+    var thumbnail: String {
+        return picture.thumbnail
+    }
+    
 }
 
 struct Name: Codable {

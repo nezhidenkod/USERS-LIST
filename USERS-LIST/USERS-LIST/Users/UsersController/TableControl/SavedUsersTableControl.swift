@@ -6,7 +6,7 @@
 //  Copyright © 2018 Dmitriy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SavedUsersTableControl: UsersTableControl {
     
@@ -27,4 +27,7 @@ class SavedUsersTableControl: UsersTableControl {
         sections = [SectionModel(cellModels: cells)]
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }

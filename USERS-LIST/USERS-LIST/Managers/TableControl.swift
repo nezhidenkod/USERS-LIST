@@ -93,6 +93,11 @@ class TablePagination {
     }
 }
 
+struct EditCell {
+    let indexPath: IndexPath
+    let style: UITableViewCell.EditingStyle
+}
+
 // MARK: - TableControl
 class TableControl: NSObject {
     
@@ -103,6 +108,7 @@ class TableControl: NSObject {
     
     // MARK: Optional
     var pagination: TablePagination?
+    var didEditingCell = DelegatedCall<EditCell>()
     var didScroll = DelegatedCall<UIScrollView>()
     var didSelectCell = DelegatedCall<IndexPath>()
     var didEndDecelerating = DelegatedCall<UIScrollView>()
@@ -184,6 +190,11 @@ extension TableControl: UITableViewDelegate {
             return height
         }
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let editCell = EditCell(indexPath: indexPath, style: editingStyle)
+        didEditingCell.callback?(editCell)
     }
 }
 
