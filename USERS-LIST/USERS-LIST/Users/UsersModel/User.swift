@@ -13,37 +13,21 @@ struct UsersResults: Codable {
 }
 
 struct User: Codable {
-    let name: Name
-    let email: String
-    let phone: String
-    let picture: Picture
+    var name: Name
+    var email: String
+    var phone: String
+    var picture: Picture
     
     init(realmUser: RLMUser) {
         self.name = Name(first: realmUser.first, last: realmUser.last)
         self.email = realmUser.email
         self.phone = realmUser.phone
-        self.picture = Picture(thumbnail: realmUser.thumbnail)
+        self.picture = Picture(thumbnail: realmUser.thumbnail, large: realmUser.image)
     }
-}
-
-extension User: UserModel {
-    
-    var first: String {
-        return name.first
-    }
-    
-    var last: String {
-        return name.last
-    }
-    
-    var thumbnail: String {
-        return picture.thumbnail
-    }
-    
 }
 
 struct Name: Codable {
-    let first, last: String
+    var first, last: String
     
     init(first: String, last: String) {
         self.first = first
@@ -52,9 +36,10 @@ struct Name: Codable {
 }
 
 struct Picture: Codable {
-    let thumbnail: String
+    var thumbnail, large: String
     
-    init(thumbnail: String) {
+    init(thumbnail: String, large: String) {
         self.thumbnail = thumbnail
+        self.large = large
     }
 }

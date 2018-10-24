@@ -17,6 +17,12 @@
 		6851FEAC217E3CE80088D7DD /* RLMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851FEAB217E3CE80088D7DD /* RLMUser.swift */; };
 		6851FEAF217E5C7E0088D7DD /* UsersViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851FEAE217E5C7E0088D7DD /* UsersViewControllerConfig.swift */; };
 		6851FEB2217E5D360088D7DD /* SavedUsersTableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851FEB1217E5D360088D7DD /* SavedUsersTableControl.swift */; };
+		68BB145C217FA44800AC0607 /* UserPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB145A217FA44800AC0607 /* UserPhotoTableViewCell.swift */; };
+		68BB145D217FA44800AC0607 /* UserPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BB145B217FA44800AC0607 /* UserPhotoTableViewCell.xib */; };
+		68BB1467217FB6D300AC0607 /* EditUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BB1465217FB6D300AC0607 /* EditUserTableViewCell.xib */; };
+		68BB14692180406300AC0607 /* EditUserCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB14682180406300AC0607 /* EditUserCellType.swift */; };
+		68BB146B2180414500AC0607 /* EditUserTableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB146A2180414500AC0607 /* EditUserTableControl.swift */; };
+		68BB146F2180463A00AC0607 /* EditUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB146E2180463A00AC0607 /* EditUserTableViewCell.swift */; };
 		68C21E6D217B186500457698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C21E6C217B186500457698 /* AppDelegate.swift */; };
 		68C21E72217B186500457698 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68C21E70217B186500457698 /* Users.storyboard */; };
 		68C21E74217B186700457698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68C21E73217B186700457698 /* Assets.xcassets */; };
@@ -49,6 +55,12 @@
 		6851FEAB217E3CE80088D7DD /* RLMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMUser.swift; sourceTree = "<group>"; };
 		6851FEAE217E5C7E0088D7DD /* UsersViewControllerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerConfig.swift; sourceTree = "<group>"; };
 		6851FEB1217E5D360088D7DD /* SavedUsersTableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUsersTableControl.swift; sourceTree = "<group>"; };
+		68BB145A217FA44800AC0607 /* UserPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		68BB145B217FA44800AC0607 /* UserPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		68BB1465217FB6D300AC0607 /* EditUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUserTableViewCell.xib; sourceTree = "<group>"; };
+		68BB14682180406300AC0607 /* EditUserCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserCellType.swift; sourceTree = "<group>"; };
+		68BB146A2180414500AC0607 /* EditUserTableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserTableControl.swift; sourceTree = "<group>"; };
+		68BB146E2180463A00AC0607 /* EditUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserTableViewCell.swift; sourceTree = "<group>"; };
 		68C21E69217B186500457698 /* USERS-LIST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "USERS-LIST.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C21E6C217B186500457698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C21E71217B186500457698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Users.storyboard; sourceTree = "<group>"; };
@@ -100,6 +112,48 @@
 				6851FEB1217E5D360088D7DD /* SavedUsersTableControl.swift */,
 			);
 			path = TableControl;
+			sourceTree = "<group>";
+		};
+		68BB1458217FA41000AC0607 /* UsersListCell */ = {
+			isa = PBXGroup;
+			children = (
+				68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */,
+				68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */,
+				68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */,
+			);
+			path = UsersListCell;
+			sourceTree = "<group>";
+		};
+		68BB1459217FA42200AC0607 /* EditUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				68BB14682180406300AC0607 /* EditUserCellType.swift */,
+				68BB145A217FA44800AC0607 /* UserPhotoTableViewCell.swift */,
+				68BB145B217FA44800AC0607 /* UserPhotoTableViewCell.xib */,
+				68BB1465217FB6D300AC0607 /* EditUserTableViewCell.xib */,
+				68BB146E2180463A00AC0607 /* EditUserTableViewCell.swift */,
+			);
+			path = EditUserCell;
+			sourceTree = "<group>";
+		};
+		68BB146C2180421B00AC0607 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				6851FEB0217E5D2D0088D7DD /* TableControl */,
+				6833C5B5217CAA3D0088F466 /* Presenter */,
+				6851FEAE217E5C7E0088D7DD /* UsersViewControllerConfig.swift */,
+				6833C5B3217CAA330088F466 /* UsersViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		68BB146D2180423000AC0607 /* EditUser */ = {
+			isa = PBXGroup;
+			children = (
+				68D83C77217EE60D00B5537B /* EditUserViewController.swift */,
+				68BB146A2180414500AC0607 /* EditUserTableControl.swift */,
+			);
+			path = EditUser;
 			sourceTree = "<group>";
 		};
 		68C21E60217B186500457698 = {
@@ -222,11 +276,8 @@
 		68C21E9A217B46D000457698 /* UsersController */ = {
 			isa = PBXGroup;
 			children = (
-				6851FEB0217E5D2D0088D7DD /* TableControl */,
-				6833C5B5217CAA3D0088F466 /* Presenter */,
-				6851FEAE217E5C7E0088D7DD /* UsersViewControllerConfig.swift */,
-				6833C5B3217CAA330088F466 /* UsersViewController.swift */,
-				68D83C77217EE60D00B5537B /* EditUserViewController.swift */,
+				68BB146C2180421B00AC0607 /* Users */,
+				68BB146D2180423000AC0607 /* EditUser */,
 			);
 			path = UsersController;
 			sourceTree = "<group>";
@@ -234,9 +285,8 @@
 		68CFEE37217BAFB90016DD89 /* UsersView */ = {
 			isa = PBXGroup;
 			children = (
-				68CFEE3F217BB50E0016DD89 /* UsersCellViewModel.swift */,
-				68CFEE38217BAFE20016DD89 /* UsersTableViewCell.swift */,
-				68CFEE39217BAFE20016DD89 /* UsersTableViewCell.xib */,
+				68BB1459217FA42200AC0607 /* EditUserCell */,
+				68BB1458217FA41000AC0607 /* UsersListCell */,
 			);
 			path = UsersView;
 			sourceTree = "<group>";
@@ -321,8 +371,10 @@
 			files = (
 				68CFEE3B217BAFE20016DD89 /* UsersTableViewCell.xib in Resources */,
 				68C21E77217B186700457698 /* LaunchScreen.storyboard in Resources */,
+				68BB1467217FB6D300AC0607 /* EditUserTableViewCell.xib in Resources */,
 				68C21E74217B186700457698 /* Assets.xcassets in Resources */,
 				68C21E72217B186500457698 /* Users.storyboard in Resources */,
+				68BB145D217FA44800AC0607 /* UserPhotoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +423,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-USERS-LIST/Pods-USERS-LIST-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
@@ -379,6 +432,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
@@ -398,11 +452,14 @@
 				68C21E89217B20AF00457698 /* BaseViewController.swift in Sources */,
 				68CFEE40217BB50E0016DD89 /* UsersCellViewModel.swift in Sources */,
 				68C21E86217B1C6300457698 /* Coordinator.swift in Sources */,
+				68BB146B2180414500AC0607 /* EditUserTableControl.swift in Sources */,
+				68BB145C217FA44800AC0607 /* UserPhotoTableViewCell.swift in Sources */,
 				68CFEE3A217BAFE20016DD89 /* UsersTableViewCell.swift in Sources */,
 				6851FEAC217E3CE80088D7DD /* RLMUser.swift in Sources */,
 				68C21E94217B3C1100457698 /* UsersURLPaths.swift in Sources */,
 				6833C5BD217CB9660088F466 /* UsersTableControl.swift in Sources */,
 				6833C5B4217CAA330088F466 /* UsersViewController.swift in Sources */,
+				68BB146F2180463A00AC0607 /* EditUserTableViewCell.swift in Sources */,
 				68C21E6D217B186500457698 /* AppDelegate.swift in Sources */,
 				68C21E96217B3FFB00457698 /* Constants.swift in Sources */,
 				68C21E84217B1ACB00457698 /* UsersTabBarController.swift in Sources */,
@@ -411,6 +468,7 @@
 				6851FEB2217E5D360088D7DD /* SavedUsersTableControl.swift in Sources */,
 				6833C5BF217CE3940088F466 /* UsersPresenter.swift in Sources */,
 				6833C5B9217CACF10088F466 /* TableControl.swift in Sources */,
+				68BB14692180406300AC0607 /* EditUserCellType.swift in Sources */,
 				6851FEAF217E5C7E0088D7DD /* UsersViewControllerConfig.swift in Sources */,
 				6833C5B2217CAA1C0088F466 /* SavedUsersPresenter.swift in Sources */,
 				68D83C78217EE60D00B5537B /* EditUserViewController.swift in Sources */,

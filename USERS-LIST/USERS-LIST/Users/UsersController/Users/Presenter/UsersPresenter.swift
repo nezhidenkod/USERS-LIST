@@ -44,7 +44,7 @@ class UsersPresenter: UsersPresenterInput {
         }
     }
     
-    func getUser(at index: Int) -> UserModel {
+    func getUser(at index: Int) -> User {
         return self.users[index]
     }
     

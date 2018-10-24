@@ -11,7 +11,7 @@ import UIKit
 // MARK: - PresenterInput
 protocol UsersPresenterInput {
     func getData(forPage page: Int?)
-    func getUser(at index: Int) -> UserModel
+    func getUser(at index: Int) -> User
     func editUser(editCell: EditCell)
 }
 
@@ -74,18 +74,21 @@ class UsersViewController: BaseViewController {
         }
     }
     
-    private func nextViewController(user: UserModel) {
+    private func nextViewController(user: User) {
         
         // TODO: Move to Coordinator
+        // ---
         let userDetail = EditUserViewController.fromStoryboard(.Users)
         
         switch configuration! {
         case .users:
             userDetail.configuration = .new(user)
         case .saved:
-            userDetail.configuration = .saved(user)
+            return
+//            userDetail.configuration = .saved(user)
         }
         self.navigationController?.pushViewController(userDetail, animated: true)
+        // ---
     }
     
 }

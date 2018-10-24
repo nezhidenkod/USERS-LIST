@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.3)
   - AlamofireImage (3.4.1):
     - Alamofire (~> 4.7)
+  - IQKeyboardManagerSwift (6.2.0)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -12,16 +13,18 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 3.4)
+  - IQKeyboardManagerSwift
   - RealmSwift
   - TOCropViewController
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
   TOCropViewController: 6d972f2c609372312648f96758e13a7f689efbc0
 
-PODFILE CHECKSUM: 634bddf695402b3b8fea93b4202d36f1717a6a39
+PODFILE CHECKSUM: c22ab2970db2df025b797ffb64265596f2e06bfd
 
 COCOAPODS: 1.4.0

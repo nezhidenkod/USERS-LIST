@@ -13,5 +13,6 @@ pod 'Alamofire'
 pod 'AlamofireImage', '~> 3.4'
 
 pod 'TOCropViewController'
+pod 'IQKeyboardManagerSwift'
 
 end

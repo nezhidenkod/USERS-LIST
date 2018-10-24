@@ -9,20 +9,13 @@
 import Foundation
 import RealmSwift
 
-protocol UserModel {
-    var first: String { get }
-    var last: String { get }
-    var email: String { get }
-    var phone: String { get }
-    var thumbnail: String { get }
-}
-
-class RLMUser: Object, UserModel {
+class RLMUser: Object {
     @objc dynamic var first: String = ""
     @objc dynamic var last: String = ""
     @objc dynamic var email: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var thumbnail: String = ""
+    @objc dynamic var image: String = ""
     
     override class func primaryKey() -> String? {
         return "phone"
@@ -31,12 +24,13 @@ class RLMUser: Object, UserModel {
 
 extension RLMUser {
     
-    convenience init(user: UserModel) {
+    convenience init(user: User) {
         self.init()
-        self.first = user.first
-        self.last = user.last
+        self.first = user.name.first
+        self.last = user.name.last
         self.email = user.email
         self.phone = user.phone
-        self.thumbnail = user.thumbnail
+        self.thumbnail = user.picture.thumbnail
+        self.image = user.picture.large
     }
 }
